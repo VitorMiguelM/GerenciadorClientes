@@ -1,0 +1,8 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="GerenciadorClientes.Api/GerenciadorClientes.Api.csproj" />
+    <Project Path="GerenciadorClientes.Aplicacao/GerenciadorClientes.Aplicacao.csproj" />
+    <Project Path="GerenciadorClientes.Dominio/GerenciadorClientes.Dominio.csproj" />
+    <Project Path="GerenciadorClientes.Infra/GerenciadorClientes.Infra.csproj" />
+  </Folder>
+</Solution>

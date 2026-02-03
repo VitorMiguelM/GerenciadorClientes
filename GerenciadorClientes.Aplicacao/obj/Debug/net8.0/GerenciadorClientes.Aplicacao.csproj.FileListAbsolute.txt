@@ -1,0 +1,15 @@
+C:\Repositories\ReactProjects\GerenciadorClientes\GerenciadorClientes.Aplicacao\bin\Debug\net8.0\GerenciadorClientes.Aplicacao.deps.json
+C:\Repositories\ReactProjects\GerenciadorClientes\GerenciadorClientes.Aplicacao\bin\Debug\net8.0\GerenciadorClientes.Aplicacao.dll
+C:\Repositories\ReactProjects\GerenciadorClientes\GerenciadorClientes.Aplicacao\bin\Debug\net8.0\GerenciadorClientes.Aplicacao.pdb
+C:\Repositories\ReactProjects\GerenciadorClientes\GerenciadorClientes.Aplicacao\bin\Debug\net8.0\GerenciadorClientes.Dominio.dll
+C:\Repositories\ReactProjects\GerenciadorClientes\GerenciadorClientes.Aplicacao\bin\Debug\net8.0\GerenciadorClientes.Dominio.pdb
+C:\Repositories\ReactProjects\GerenciadorClientes\GerenciadorClientes.Aplicacao\obj\Debug\net8.0\GerenciadorClientes.Aplicacao.csproj.AssemblyReference.cache
+C:\Repositories\ReactProjects\GerenciadorClientes\GerenciadorClientes.Aplicacao\obj\Debug\net8.0\GerenciadorClientes.Aplicacao.GeneratedMSBuildEditorConfig.editorconfig
+C:\Repositories\ReactProjects\GerenciadorClientes\GerenciadorClientes.Aplicacao\obj\Debug\net8.0\GerenciadorClientes.Aplicacao.AssemblyInfoInputs.cache
+C:\Repositories\ReactProjects\GerenciadorClientes\GerenciadorClientes.Aplicacao\obj\Debug\net8.0\GerenciadorClientes.Aplicacao.AssemblyInfo.cs
+C:\Repositories\ReactProjects\GerenciadorClientes\GerenciadorClientes.Aplicacao\obj\Debug\net8.0\GerenciadorClientes.Aplicacao.csproj.CoreCompileInputs.cache
+C:\Repositories\ReactProjects\GerenciadorClientes\GerenciadorClientes.Aplicacao\obj\Debug\net8.0\Gerencia.0CA421ED.Up2Date
+C:\Repositories\ReactProjects\GerenciadorClientes\GerenciadorClientes.Aplicacao\obj\Debug\net8.0\GerenciadorClientes.Aplicacao.dll
+C:\Repositories\ReactProjects\GerenciadorClientes\GerenciadorClientes.Aplicacao\obj\Debug\net8.0\refint\GerenciadorClientes.Aplicacao.dll
+C:\Repositories\ReactProjects\GerenciadorClientes\GerenciadorClientes.Aplicacao\obj\Debug\net8.0\GerenciadorClientes.Aplicacao.pdb
+C:\Repositories\ReactProjects\GerenciadorClientes\GerenciadorClientes.Aplicacao\obj\Debug\net8.0\ref\GerenciadorClientes.Aplicacao.dll

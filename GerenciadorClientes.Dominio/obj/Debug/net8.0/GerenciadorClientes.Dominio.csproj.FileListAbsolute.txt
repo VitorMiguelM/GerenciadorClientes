@@ -1,0 +1,11 @@
+C:\Repositories\ReactProjects\GerenciadorClientes\GerenciadorClientes.Dominio\bin\Debug\net8.0\GerenciadorClientes.Dominio.deps.json
+C:\Repositories\ReactProjects\GerenciadorClientes\GerenciadorClientes.Dominio\bin\Debug\net8.0\GerenciadorClientes.Dominio.dll
+C:\Repositories\ReactProjects\GerenciadorClientes\GerenciadorClientes.Dominio\bin\Debug\net8.0\GerenciadorClientes.Dominio.pdb
+C:\Repositories\ReactProjects\GerenciadorClientes\GerenciadorClientes.Dominio\obj\Debug\net8.0\GerenciadorClientes.Dominio.GeneratedMSBuildEditorConfig.editorconfig
+C:\Repositories\ReactProjects\GerenciadorClientes\GerenciadorClientes.Dominio\obj\Debug\net8.0\GerenciadorClientes.Dominio.AssemblyInfoInputs.cache
+C:\Repositories\ReactProjects\GerenciadorClientes\GerenciadorClientes.Dominio\obj\Debug\net8.0\GerenciadorClientes.Dominio.AssemblyInfo.cs
+C:\Repositories\ReactProjects\GerenciadorClientes\GerenciadorClientes.Dominio\obj\Debug\net8.0\GerenciadorClientes.Dominio.csproj.CoreCompileInputs.cache
+C:\Repositories\ReactProjects\GerenciadorClientes\GerenciadorClientes.Dominio\obj\Debug\net8.0\GerenciadorClientes.Dominio.dll
+C:\Repositories\ReactProjects\GerenciadorClientes\GerenciadorClientes.Dominio\obj\Debug\net8.0\refint\GerenciadorClientes.Dominio.dll
+C:\Repositories\ReactProjects\GerenciadorClientes\GerenciadorClientes.Dominio\obj\Debug\net8.0\GerenciadorClientes.Dominio.pdb
+C:\Repositories\ReactProjects\GerenciadorClientes\GerenciadorClientes.Dominio\obj\Debug\net8.0\ref\GerenciadorClientes.Dominio.dll
