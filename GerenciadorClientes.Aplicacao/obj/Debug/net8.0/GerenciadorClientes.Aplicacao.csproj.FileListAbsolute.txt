@@ -13,3 +13,4 @@ C:\Repositories\ReactProjects\GerenciadorClientes\GerenciadorClientes.Aplicacao\
 C:\Repositories\ReactProjects\GerenciadorClientes\GerenciadorClientes.Aplicacao\obj\Debug\net8.0\refint\GerenciadorClientes.Aplicacao.dll
 C:\Repositories\ReactProjects\GerenciadorClientes\GerenciadorClientes.Aplicacao\obj\Debug\net8.0\GerenciadorClientes.Aplicacao.pdb
 C:\Repositories\ReactProjects\GerenciadorClientes\GerenciadorClientes.Aplicacao\obj\Debug\net8.0\ref\GerenciadorClientes.Aplicacao.dll
+C:\Repositories\ReactProjects\GerenciadorClientes\GerenciadorClientes.Aplicacao\obj\Debug\net8.0\GerenciadorClientes.Aplicacao.sourcelink.json

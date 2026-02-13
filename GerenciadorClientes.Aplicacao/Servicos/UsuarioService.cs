@@ -26,7 +26,7 @@ namespace GerenciadorClientes.Aplicacao.Servicos
             if (await _usuarioRepository.ObterUsuarioPorEmailAsync(dto.Email) != null)
                 throw new BadRequestException("Email já cadastrado.");
 
-            var hash = BCrypt.Net.BCrypt.HashPassword(dto.SenhaHash);
+            var hash = BCrypt.Net.BCrypt.HashPassword(dto.Senha);
             var usuario = new Usuario(dto.Nome, dto.Email, hash);
 
             await _usuarioRepository.RegistrarUsuarioAsync(usuario);

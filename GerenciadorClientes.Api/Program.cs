@@ -25,6 +25,19 @@ builder.Services.AddScoped<ITokenService, TokenService>();
 builder.Services.AddScoped<IUsuarioRepository, UsuarioRepository>();
 builder.Services.AddScoped<IClienteRepository, ClienteRepository>();
 
+//CORS config
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("ReactPolicy", policy =>
+    {
+        policy
+            .WithOrigins("http://localhost:5173")
+            .AllowAnyHeader()
+            .AllowAnyMethod();
+    });
+});
+
+
 //Entity Framework / Database
 builder.Services.AddDbContext<AppDbContext>(options =>
     options.UseNpgsql(
@@ -33,10 +46,8 @@ builder.Services.AddDbContext<AppDbContext>(options =>
 );
 
 //Controllers / Filter
-builder.Services.AddControllers(options =>
-{
-    options.Filters.Add<GlobalExceptionFilter>();
-});
+builder.Services.AddControllers(options => options.Filters.Add<GlobalExceptionFilter>())
+    .AddJsonOptions(options => options.JsonSerializerOptions.PropertyNamingPolicy = System.Text.Json.JsonNamingPolicy.CamelCase);
 
 //Swagger
 builder.Services.AddEndpointsApiExplorer();
@@ -107,6 +118,9 @@ if (app.Environment.IsDevelopment())
 app.UseHttpsRedirection();
 
 app.UseAuthentication();
+
+app.UseCors("ReactPolicy");
+
 app.UseAuthorization();
 
 app.MapControllers();

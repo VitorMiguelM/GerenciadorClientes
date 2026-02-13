@@ -34,6 +34,8 @@ Os endpoints devem ser executados utilizando o Swagger, ja configurado.
 
 Localmente na porta: https://localhost:7084/swagger
 
+Também pode ser executado o Client, localmente na porta: http://localhost:5173/
+
 Irei subir a aplicação toda sem adicionar arquivos no gitgnore.
 
 :D

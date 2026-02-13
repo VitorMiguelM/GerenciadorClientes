@@ -31,9 +31,9 @@ namespace GerenciadorClientes.Api.Filters
 
             var response = new
             {
-                status = statusCode,
+                //status = statusCode,
                 error = message,
-                details = _environment.IsDevelopment() ? context.Exception.StackTrace : null
+                //details = _environment.IsDevelopment() ? context.Exception.StackTrace : null
             };
 
             context.Result = new ObjectResult(response)

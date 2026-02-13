@@ -9,3 +9,4 @@ C:\Repositories\ReactProjects\GerenciadorClientes\GerenciadorClientes.Dominio\ob
 C:\Repositories\ReactProjects\GerenciadorClientes\GerenciadorClientes.Dominio\obj\Debug\net8.0\refint\GerenciadorClientes.Dominio.dll
 C:\Repositories\ReactProjects\GerenciadorClientes\GerenciadorClientes.Dominio\obj\Debug\net8.0\GerenciadorClientes.Dominio.pdb
 C:\Repositories\ReactProjects\GerenciadorClientes\GerenciadorClientes.Dominio\obj\Debug\net8.0\ref\GerenciadorClientes.Dominio.dll
+C:\Repositories\ReactProjects\GerenciadorClientes\GerenciadorClientes.Dominio\obj\Debug\net8.0\GerenciadorClientes.Dominio.sourcelink.json

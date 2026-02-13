@@ -34,6 +34,7 @@ namespace GerenciadorClientes.Aplicacao.Servicos
 
             var clientesDto = clientes.Select(c => new ClienteDto
             {
+                Id = c.Id,
                 Nome = c.Nome,
                 Email = c.Email,
                 DataNascimento = c.DataNascimento,

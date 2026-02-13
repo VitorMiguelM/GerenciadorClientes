@@ -1,0 +1,110 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.autenticacao-container {
+    max-width: 400px;
+    margin: 60px auto;
+    padding: 30px;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+    background-color: #ffffff;
+}
+
+.autenticacao-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 22px;
+    font-weight: bold;
+    color: #333;
+}
+
+.autenticacao-erro {
+    background-color: #ffe5e5;
+    color: #b00020;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 6px;
+    font-size: 14px;
+}
+
+.autenticacao-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.autenticacao-form label {
+    font-size: 14px;
+    margin-bottom: 5px;
+    color: #444;
+}
+
+.autenticacao-form input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.autenticacao-form input:focus {
+    outline: none;
+    border-color: #2563eb;
+    box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.15);
+}
+
+.autenticacao-form button {
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.05s ease;
+}
+
+.autenticacao-button-primary {
+    background-color: #2563eb;
+    color: white;
+}
+
+.autenticacao-button-primary:hover {
+    background-color: #1e4fd8;
+}
+
+.autenticacao-button-secondary {
+    background-color: #e5e7eb;
+    color: #333;
+}
+
+.autenticacao-button-secondary:hover {
+    background-color: #d1d5db;
+}
+
+.autenticacao-form button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.autenticacao-form button:active {
+    transform: scale(0.98);
+}
+
+.autenticacao-field {
+    display: flex;
+    flex-direction: column;
+}
+
+.autenticacao-form input::placeholder {
+    color: #9ca3af;
+}
+
+.autenticacao-button-primary {
+    margin-top: 10px;
+}

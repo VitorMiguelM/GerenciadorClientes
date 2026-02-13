@@ -25,7 +25,8 @@ namespace GerenciadorClientes.Api.Controllers
         public async Task<ActionResult> Registrar([FromBody] ClienteDto dto)
         {
             await _clienteService.RegistrarClienteAsync(dto, UsuarioId);
-            return Created(string.Empty, null);
+
+            return Created();
         }
 
         [HttpGet]

@@ -10,7 +10,7 @@ namespace GerenciadorClientes.Aplicacao.Dtos
         
         public required string Email { get; set; }
         
-        public required string SenhaHash { get; set; }
+        public required string Senha { get; set; }
 
     }
 }

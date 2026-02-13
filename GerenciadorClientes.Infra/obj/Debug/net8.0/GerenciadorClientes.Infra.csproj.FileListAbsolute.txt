@@ -17,3 +17,4 @@ C:\Repositories\ReactProjects\GerenciadorClientes\GerenciadorClientes.Infra\obj\
 C:\Repositories\ReactProjects\GerenciadorClientes\GerenciadorClientes.Infra\obj\Debug\net8.0\GerenciadorClientes.Infra.pdb
 C:\Repositories\ReactProjects\GerenciadorClientes\GerenciadorClientes.Infra\obj\Debug\net8.0\GerenciadorClientes.Infra.genruntimeconfig.cache
 C:\Repositories\ReactProjects\GerenciadorClientes\GerenciadorClientes.Infra\obj\Debug\net8.0\ref\GerenciadorClientes.Infra.dll
+C:\Repositories\ReactProjects\GerenciadorClientes\GerenciadorClientes.Infra\obj\Debug\net8.0\GerenciadorClientes.Infra.sourcelink.json

@@ -201,6 +201,11 @@
       "ClienteDto": {
         "type": "object",
         "properties": {
+          "id": {
+            "type": "string",
+            "format": "uuid",
+            "nullable": true
+          },
           "nome": {
             "type": "string",
             "nullable": true
@@ -241,7 +246,7 @@
             "type": "string",
             "nullable": true
           },
-          "senhaHash": {
+          "senha": {
             "type": "string",
             "nullable": true
           }

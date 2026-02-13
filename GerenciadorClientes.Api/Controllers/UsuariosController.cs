@@ -1,5 +1,5 @@
 ﻿using GerenciadorClientes.Aplicacao.Dtos;
-using GerenciadorClientes.Aplicacao.Interfaces;
+using GerenciadorClientes.Aplicacao.Interfaces; 
 using Microsoft.AspNetCore.Mvc;
 
 namespace GerenciadorClientes.Api.Controllers

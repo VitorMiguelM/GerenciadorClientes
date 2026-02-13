@@ -122,3 +122,4 @@ C:\Repositories\ReactProjects\GerenciadorClientes\GerenciadorClientes.Api\obj\De
 C:\Repositories\ReactProjects\GerenciadorClientes\GerenciadorClientes.Api\obj\Debug\net8.0\GerenciadorClientes.Api.genruntimeconfig.cache
 C:\Repositories\ReactProjects\GerenciadorClientes\GerenciadorClientes.Api\obj\Debug\net8.0\ref\GerenciadorClientes.Api.dll
 C:\Repositories\ReactProjects\GerenciadorClientes\GerenciadorClientes.Api\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
+C:\Repositories\ReactProjects\GerenciadorClientes\GerenciadorClientes.Api\obj\Debug\net8.0\GerenciadorClientes.Api.sourcelink.json

@@ -3,12 +3,28 @@
   "WorkspaceRootPath": "C:\\Repositories\\ReactProjects\\GerenciadorClientes\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{0C1EF2F0-B230-3EF4-D646-3836888F9771}|GerenciadorClientes.Api\\GerenciadorClientes.Api.csproj|c:\\repositories\\reactprojects\\gerenciadorclientes\\gerenciadorclientes.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0C1EF2F0-B230-3EF4-D646-3836888F9771}|GerenciadorClientes.Api\\GerenciadorClientes.Api.csproj|solutionrelative:gerenciadorclientes.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{0C1EF2F0-B230-3EF4-D646-3836888F9771}|GerenciadorClientes.Api\\GerenciadorClientes.Api.csproj|c:\\repositories\\reactprojects\\gerenciadorclientes\\gerenciadorclientes.api\\controllers\\clientescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0C1EF2F0-B230-3EF4-D646-3836888F9771}|GerenciadorClientes.Api\\GerenciadorClientes.Api.csproj|solutionrelative:gerenciadorclientes.api\\controllers\\clientescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E2E01893-55D4-DAF2-28A3-344FCA7AB838}|GerenciadorClientes.Dominio\\GerenciadorClientes.Dominio.csproj|c:\\repositories\\reactprojects\\gerenciadorclientes\\gerenciadorclientes.dominio\\entidades\\cliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E2E01893-55D4-DAF2-28A3-344FCA7AB838}|GerenciadorClientes.Dominio\\GerenciadorClientes.Dominio.csproj|solutionrelative:gerenciadorclientes.dominio\\entidades\\cliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E2E01893-55D4-DAF2-28A3-344FCA7AB838}|GerenciadorClientes.Dominio\\GerenciadorClientes.Dominio.csproj|c:\\repositories\\reactprojects\\gerenciadorclientes\\gerenciadorclientes.dominio\\interfaces\\iclienterepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E2E01893-55D4-DAF2-28A3-344FCA7AB838}|GerenciadorClientes.Dominio\\GerenciadorClientes.Dominio.csproj|solutionrelative:gerenciadorclientes.dominio\\interfaces\\iclienterepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2C88DA2D-0558-A582-3516-068EA976A97D}|GerenciadorClientes.Infra\\GerenciadorClientes.Infra.csproj|c:\\repositories\\reactprojects\\gerenciadorclientes\\gerenciadorclientes.infra\\repositorios\\clienterepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2C88DA2D-0558-A582-3516-068EA976A97D}|GerenciadorClientes.Infra\\GerenciadorClientes.Infra.csproj|solutionrelative:gerenciadorclientes.infra\\repositorios\\clienterepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1CCC6D00-C7E6-0E9E-A101-5047B387FE75}|GerenciadorClientes.Aplicacao\\GerenciadorClientes.Aplicacao.csproj|c:\\repositories\\reactprojects\\gerenciadorclientes\\gerenciadorclientes.aplicacao\\interfaces\\iclienteservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1CCC6D00-C7E6-0E9E-A101-5047B387FE75}|GerenciadorClientes.Aplicacao\\GerenciadorClientes.Aplicacao.csproj|solutionrelative:gerenciadorclientes.aplicacao\\interfaces\\iclienteservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1CCC6D00-C7E6-0E9E-A101-5047B387FE75}|GerenciadorClientes.Aplicacao\\GerenciadorClientes.Aplicacao.csproj|c:\\repositories\\reactprojects\\gerenciadorclientes\\gerenciadorclientes.aplicacao\\servicos\\clienteservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1CCC6D00-C7E6-0E9E-A101-5047B387FE75}|GerenciadorClientes.Aplicacao\\GerenciadorClientes.Aplicacao.csproj|solutionrelative:gerenciadorclientes.aplicacao\\servicos\\clienteservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,32 +34,84 @@
       "DocumentGroups": [
         {
           "DockedWidth": 218,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "ClientesController.cs",
-              "DocumentMoniker": "C:\\Repositories\\ReactProjects\\GerenciadorClientes\\GerenciadorClientes.Api\\Controllers\\ClientesController.cs",
-              "RelativeDocumentMoniker": "GerenciadorClientes.Api\\Controllers\\ClientesController.cs",
-              "ToolTip": "C:\\Repositories\\ReactProjects\\GerenciadorClientes\\GerenciadorClientes.Api\\Controllers\\ClientesController.cs",
-              "RelativeToolTip": "GerenciadorClientes.Api\\Controllers\\ClientesController.cs",
-              "ViewState": "AgIAABgAAAAAAAAAAAA1wC0AAAAAAAAAAAAAAA==",
+              "Title": "Cliente.cs",
+              "DocumentMoniker": "C:\\Repositories\\ReactProjects\\GerenciadorClientes\\GerenciadorClientes.Dominio\\Entidades\\Cliente.cs",
+              "RelativeDocumentMoniker": "GerenciadorClientes.Dominio\\Entidades\\Cliente.cs",
+              "ToolTip": "C:\\Repositories\\ReactProjects\\GerenciadorClientes\\GerenciadorClientes.Dominio\\Entidades\\Cliente.cs",
+              "RelativeToolTip": "GerenciadorClientes.Dominio\\Entidades\\Cliente.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAA1wAgAAAAsAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-02T20:56:06.338Z",
+              "WhenOpened": "2026-02-13T06:48:16.528Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "IClienteRepository.cs",
+              "DocumentMoniker": "C:\\Repositories\\ReactProjects\\GerenciadorClientes\\GerenciadorClientes.Dominio\\Interfaces\\IClienteRepository.cs",
+              "RelativeDocumentMoniker": "GerenciadorClientes.Dominio\\Interfaces\\IClienteRepository.cs",
+              "ToolTip": "C:\\Repositories\\ReactProjects\\GerenciadorClientes\\GerenciadorClientes.Dominio\\Interfaces\\IClienteRepository.cs",
+              "RelativeToolTip": "GerenciadorClientes.Dominio\\Interfaces\\IClienteRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-13T05:59:55.617Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ClienteRepository.cs",
+              "DocumentMoniker": "C:\\Repositories\\ReactProjects\\GerenciadorClientes\\GerenciadorClientes.Infra\\Repositorios\\ClienteRepository.cs",
+              "RelativeDocumentMoniker": "GerenciadorClientes.Infra\\Repositorios\\ClienteRepository.cs",
+              "ToolTip": "C:\\Repositories\\ReactProjects\\GerenciadorClientes\\GerenciadorClientes.Infra\\Repositorios\\ClienteRepository.cs",
+              "RelativeToolTip": "GerenciadorClientes.Infra\\Repositorios\\ClienteRepository.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAAwBQAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-13T06:01:06.155Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "IClienteService.cs",
+              "DocumentMoniker": "C:\\Repositories\\ReactProjects\\GerenciadorClientes\\GerenciadorClientes.Aplicacao\\Interfaces\\IClienteService.cs",
+              "RelativeDocumentMoniker": "GerenciadorClientes.Aplicacao\\Interfaces\\IClienteService.cs",
+              "ToolTip": "C:\\Repositories\\ReactProjects\\GerenciadorClientes\\GerenciadorClientes.Aplicacao\\Interfaces\\IClienteService.cs",
+              "RelativeToolTip": "GerenciadorClientes.Aplicacao\\Interfaces\\IClienteService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-13T05:58:06.786Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ClienteService.cs",
+              "DocumentMoniker": "C:\\Repositories\\ReactProjects\\GerenciadorClientes\\GerenciadorClientes.Aplicacao\\Servicos\\ClienteService.cs",
+              "RelativeDocumentMoniker": "GerenciadorClientes.Aplicacao\\Servicos\\ClienteService.cs",
+              "ToolTip": "C:\\Repositories\\ReactProjects\\GerenciadorClientes\\GerenciadorClientes.Aplicacao\\Servicos\\ClienteService.cs",
+              "RelativeToolTip": "GerenciadorClientes.Aplicacao\\Servicos\\ClienteService.cs",
+              "ViewState": "AgIAABgAAAAAAAAAAAAYwBsAAABEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-13T04:21:10.229Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Repositories\\ReactProjects\\GerenciadorClientes\\GerenciadorClientes.Api\\Program.cs",
-              "RelativeDocumentMoniker": "GerenciadorClientes.Api\\Program.cs",
-              "ToolTip": "C:\\Repositories\\ReactProjects\\GerenciadorClientes\\GerenciadorClientes.Api\\Program.cs",
-              "RelativeToolTip": "GerenciadorClientes.Api\\Program.cs",
-              "ViewState": "AgIAADwAAAAAAAAAAAAAAHIAAAAAAAAAAAAAAA==",
+              "Title": "ClientesController.cs",
+              "DocumentMoniker": "C:\\Repositories\\ReactProjects\\GerenciadorClientes\\GerenciadorClientes.Api\\Controllers\\ClientesController.cs",
+              "RelativeDocumentMoniker": "GerenciadorClientes.Api\\Controllers\\ClientesController.cs",
+              "ToolTip": "C:\\Repositories\\ReactProjects\\GerenciadorClientes\\GerenciadorClientes.Api\\Controllers\\ClientesController.cs",
+              "RelativeToolTip": "GerenciadorClientes.Api\\Controllers\\ClientesController.cs",
+              "ViewState": "AgIAACAAAAAAAAAAAIAwwCoAAABWAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-02T19:00:02.487Z",
+              "WhenOpened": "2026-02-12T20:57:48.729Z",
               "EditorCaption": ""
             }
           ]
