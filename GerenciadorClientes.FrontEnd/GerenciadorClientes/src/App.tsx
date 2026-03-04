@@ -1,5 +1,5 @@
 import './App.css'
-import { ProvedorAutenticacao } from './features/autenticacao/hooks/ContextoAutenticacao'
+import { ProvedorAutenticacao } from './features/autenticacao/hooks/ProvedorAutenticacao'
 import { AppRoutes } from './router/AppRouter'
 
 function App() {

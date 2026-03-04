@@ -8,14 +8,9 @@ using System.Text;
 
 namespace GerenciadorClientes.Infra.Repositorios
 {
-    public class ClienteRepository : IClienteRepository
+    public class ClienteRepository(AppDbContext dbContext) : IClienteRepository
     {
-        private readonly AppDbContext _dbContext;
-
-        public ClienteRepository(AppDbContext dbContext)
-        {
-            _dbContext = dbContext;
-        }
+        private readonly AppDbContext _dbContext = dbContext;
 
         public async Task RegistrarClienteAsync(Cliente cliente)
         {

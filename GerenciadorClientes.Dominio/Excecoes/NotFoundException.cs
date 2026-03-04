@@ -4,8 +4,7 @@ using System.Text;
 
 namespace GerenciadorClientes.Dominio.Excecoes
 {
-    public class NotFoundException : Exception
+    public class NotFoundException(string mensagem) : Exception(mensagem)
     {
-        public NotFoundException(string mensagem) : base(mensagem) {}
     }
 }

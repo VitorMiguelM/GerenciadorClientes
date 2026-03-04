@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("GerenciadorClientes.Api")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2f10e4bd582b7524608e0a13d1b5631fccc9685a")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+192f6051e41b12467a873a2fc90235d6715a46d1")]
 [assembly: System.Reflection.AssemblyProductAttribute("GerenciadorClientes.Api")]
 [assembly: System.Reflection.AssemblyTitleAttribute("GerenciadorClientes.Api")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

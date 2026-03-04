@@ -10,14 +10,9 @@ using System.Text;
 
 namespace GerenciadorClientes.Aplicacao.Servicos
 {
-    public class ClienteService : IClienteService
+    public class ClienteService(IClienteRepository clienteRepository) : IClienteService
     {
-        private readonly IClienteRepository _clienteRepository;
-
-        public ClienteService (IClienteRepository clienteRepository)
-        {
-            _clienteRepository = clienteRepository;
-        }
+        private readonly IClienteRepository _clienteRepository = clienteRepository;
 
         public async Task RegistrarClienteAsync(ClienteDto dto, Guid usuarioId)
         {
@@ -77,24 +72,38 @@ namespace GerenciadorClientes.Aplicacao.Servicos
 
         private async Task<Cliente> ObterClienteValidadoAsync(Guid id, Guid usuarioId)
         {
-            var cliente = await _clienteRepository.ObterClientePorIdAsync(id);
-
-            if (cliente is null)
-                throw new NotFoundException("Cliente não encontrado.");
+            var cliente = await _clienteRepository.ObterClientePorIdAsync(id) ?? throw new NotFoundException("Cliente não encontrado.");
 
             if (cliente.UsuarioId != usuarioId)
-                throw new ForbiddenException("Permissão para acessar cliente negada.");
+            { 
+                throw new ValidationException(
+                    [
+                    new ApiValidationErrror{
+                        Campo = "id",
+                        Codigo = "NOT_MY_CLIENT"
+                    }
+                    ]);
+            }
 
             return cliente;
         }
 
-        private void ValidarIdade(DateOnly dataNascimento)
+        private static void ValidarIdade(DateOnly dataNascimento)
         {
             if (CalcularIdade(dataNascimento) < 18)
-                throw new BadRequestException("Cliente deve ser maior de 18 anos.");
+            {
+                throw new ValidationException(
+                    [
+                    new ApiValidationErrror
+                    {
+                        Campo = "dataNascimento",
+                        Codigo = "UNDER_AGE"
+                    }
+                    ]);
+            }
         }
 
-        private int CalcularIdade(DateOnly dataNascimento)
+        private static int CalcularIdade(DateOnly dataNascimento)
         {
             var hoje = DateOnly.FromDateTime(DateTime.Today);
 

@@ -6,14 +6,9 @@ namespace GerenciadorClientes.Api.Controllers
 {
     [ApiController]
     [Route("api/usuarios")]
-    public class UsuariosController: ControllerBase
+    public class UsuariosController(IUsuarioService usuarioService) : ControllerBase
     {
-        private readonly IUsuarioService _usuarioService;
-
-        public UsuariosController(IUsuarioService usuarioService)
-        {
-            _usuarioService = usuarioService;
-        }
+        private readonly IUsuarioService _usuarioService = usuarioService;
 
         [HttpPost("registrar")]
         public async Task<ActionResult> Registrar(UsuarioDto dto)

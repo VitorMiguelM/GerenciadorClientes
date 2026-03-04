@@ -10,16 +10,11 @@ namespace GerenciadorClientes.Api.Controllers
     [Authorize]
     [ApiController]
     [Route("api/clientes")]
-    public class ClientesController : ControllerBase
+    public class ClientesController(IClienteService clienteService) : ControllerBase
     {
-        private readonly IClienteService _clienteService;
+        private readonly IClienteService _clienteService = clienteService;
 
         private Guid UsuarioId => Guid.Parse(User.FindFirstValue(ClaimTypes.NameIdentifier)!);
-
-        public ClientesController(IClienteService clienteService)
-        {
-            _clienteService = clienteService;
-        }
 
         [HttpPost]
         public async Task<ActionResult> Registrar([FromBody] ClienteDto dto)

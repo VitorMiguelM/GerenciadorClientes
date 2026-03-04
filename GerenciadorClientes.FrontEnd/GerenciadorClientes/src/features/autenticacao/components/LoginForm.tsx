@@ -1,33 +1,22 @@
 import { useState } from "react";
-import { usarAutenticacao } from "../hooks/ContextoAutenticacao"
+import { usarAutenticacao } from "../hooks/UsarAutenticacao";
 import { useNavigate } from "react-router-dom";
 import { Paths } from "../../../router/Path";
 import "../components/Usuario.css";
 
-export const LoginForm = () => {
-    const { login } = usarAutenticacao();
+export function LoginForm(){
+    const { login, estaAutenticado, carregando, erro } = usarAutenticacao();
     const navegar = useNavigate();
 
     const [email, setEmail] = useState('');
     const [senha, setSenha] = useState('');
-    const [erro, setErro] = useState<string | null>(null);
-    const [carregando, setCarregando] = useState(false);
 
     const handleSubmit = async (e: React.SubmitEvent) => {
         e.preventDefault();
-        setErro(null);
-        setCarregando(true);
 
-        try {
-            await login({ email, senha});
+        await login({ email, senha});
+        if(estaAutenticado)
             navegar(Paths.clienteDashboard, {replace: true});
-        }
-        catch(erro: any){
-            setErro(erro.message || 'falha ao realizar login');
-        }
-        finally{
-            setCarregando(false);
-        }
     };
 
     return (

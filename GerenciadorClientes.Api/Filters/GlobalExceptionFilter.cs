@@ -5,36 +5,61 @@ using System.Net;
 
 namespace GerenciadorClientes.Api.Filters
 {
-    public class GlobalExceptionFilter : IExceptionFilter
+    public class GlobalExceptionFilter(ILogger<GlobalExceptionFilter> logger) : IExceptionFilter
     {
-        private readonly ILogger<GlobalExceptionFilter> _logger;
-        private readonly IWebHostEnvironment _environment;
-
-        public GlobalExceptionFilter(ILogger<GlobalExceptionFilter> logger, IWebHostEnvironment environment)
-        {
-            _logger = logger;
-            _environment = environment;
-        }
+        private readonly ILogger<GlobalExceptionFilter> _logger = logger;
 
         public void OnException(ExceptionContext context)
         {
             _logger.LogError(context.Exception, context.Exception.Message);
 
-            var (statusCode, message) = context.Exception switch
-            {
-                NotFoundException exception => ((int)HttpStatusCode.NotFound, exception.Message),
-                ForbiddenException exception => ((int)HttpStatusCode.Forbidden, exception.Message),
-                UnauthorizedAccessException exception => ((int)HttpStatusCode.Unauthorized, exception.Message),
-                BadRequestException exception => ((int)HttpStatusCode.BadRequest, exception.Message),
-                var internalError => ((int)HttpStatusCode.InternalServerError, "Erro interno no servidor.")
-            };
+            int statusCode;
+            object response;
 
-            var response = new
+            switch(context.Exception)
             {
-                //status = statusCode,
-                error = message,
-                //details = _environment.IsDevelopment() ? context.Exception.StackTrace : null
-            };
+                case ValidationException validationException:
+                    statusCode = (int)HttpStatusCode.BadRequest;
+                    response = new ApiErrorResponse
+                    {
+                        Status = statusCode,
+                        Codigo = "VALIDATION_ERROR",
+                        Erros = validationException.Erros
+                    };
+                    break;
+                case NotFoundException:
+                    statusCode = (int)HttpStatusCode.NotFound;
+                    response = new ApiErrorResponse
+                    {
+                        Status = statusCode,
+                        Codigo = "NOT_FOUND"
+                    };
+                    break;
+                case ForbiddenException:
+                    statusCode = (int)HttpStatusCode.Forbidden;
+                    response = new ApiErrorResponse
+                    {
+                        Status = statusCode,
+                        Codigo = "FORBIDDEN"
+                    };
+                    break;
+                case UnauthorizedAccessException:
+                    statusCode = (int)HttpStatusCode.Unauthorized;
+                    response = new ApiErrorResponse
+                    {
+                        Status = statusCode,
+                        Codigo = "UNAUTHORIZED"
+                    };
+                    break;
+                default:
+                    statusCode = (int)HttpStatusCode.InternalServerError;
+                    response = new ApiErrorResponse
+                    {
+                        Status = statusCode,
+                        Codigo = "INTERNAL_ERROR"
+                    };
+                    break;
+            }
 
             context.Result = new ObjectResult(response)
             {
@@ -42,7 +67,6 @@ namespace GerenciadorClientes.Api.Filters
             };
 
             context.ExceptionHandled = true;
-
         }
     }
 }

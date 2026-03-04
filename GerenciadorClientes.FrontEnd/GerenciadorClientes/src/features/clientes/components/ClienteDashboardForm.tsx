@@ -1,14 +1,14 @@
 import { useState } from "react";
-import { GerenciarClientes } from "../hooks/GerenciarClientes"
+import { useGerenciarClientes } from "../hooks/GerenciarClientes"
 import { type ClienteDto } from "../types/Interfaces";
 import { formatarDataBr } from "../../../utils/formatador";
 import "../components/ClienteDashboardForm.css";
-import { usarAutenticacao } from "../../autenticacao/hooks/ContextoAutenticacao";
+import { usarAutenticacao } from "../../autenticacao/hooks/UsarAutenticacao";
 import { useNavigate } from "react-router-dom";
 import { Paths } from "../../../router/Path";
 
-export const ClienteDashboard = () => {
-    const {clientes, carregando, erro, registrarCliente, buscarPorId, atualizarCliente, removerCliente } = GerenciarClientes();
+export function ClienteDashboard(){
+    const {clientes, carregando, erro, registrarCliente, buscarPorId, atualizarCliente, removerCliente } = useGerenciarClientes();
 
     const autenticacao = usarAutenticacao();
     const navegar = useNavigate();
@@ -43,19 +43,13 @@ export const ClienteDashboard = () => {
 
     const handleSubmit = async (e: React.SubmitEvent) => {
         e.preventDefault();
-        try {
-            if(estaEditando && dadosformulario.id) {
-                await atualizarCliente(dadosformulario.id, dadosformulario);
-                alert('Cliente Atualizado.');
-            }
-            else {
-                await registrarCliente(dadosformulario);
-            }        
-            limparFormulario
+        if(estaEditando && dadosformulario.id) {
+            await atualizarCliente(dadosformulario.id, dadosformulario);
         }
-        catch(erro: any) {
-            alert(erro.message)
-        }
+        else {
+            await registrarCliente(dadosformulario);
+        }        
+        limparFormulario;
     };
 
     const limparFormulario = () => {
@@ -67,7 +61,6 @@ export const ClienteDashboard = () => {
    const handleOnClickSair = () => {
     autenticacao.logout();
     navegar(Paths.login);
-    
    }
 
     return(
@@ -132,7 +125,7 @@ export const ClienteDashboard = () => {
                     <button 
                         type="submit" 
                         disabled={carregando}
-                        className={`dashboard-button ${estaEditando ? 'dashboard-button-warning' : 'dashboard-button-succes'}`}
+                        className={`dashboard-button ${estaEditando ? 'dashboard-button-warning' : 'dashboard-button-success'}`}
                     >
                         {carregando ? 'Processando...' : estaEditando ? 'Salvar Alterações' : 'Cadastrar Cliente'}
                     </button>

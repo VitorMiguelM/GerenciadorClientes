@@ -4,8 +4,7 @@ using System.Text;
 
 namespace GerenciadorClientes.Dominio.Excecoes
 {
-    public class ForbiddenException : Exception
+    public class ForbiddenException(string mensagem) : Exception(mensagem)
     {
-        public ForbiddenException(string mensagem) : base(mensagem) {}
     }
 }

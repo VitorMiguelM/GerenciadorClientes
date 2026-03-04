@@ -4,8 +4,7 @@ using System.Text;
 
 namespace GerenciadorClientes.Dominio.Excecoes
 {
-    public class BadRequestException : Exception
+    public class BadRequestException(string mensagem) : Exception(mensagem)
     {
-        public BadRequestException(string mensagem) : base(mensagem) { }
     }
 }

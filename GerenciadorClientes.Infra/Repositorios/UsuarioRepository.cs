@@ -8,14 +8,9 @@ using System.Text;
 
 namespace GerenciadorClientes.Infra.Repositorios
 {
-    public class UsuarioRepository : IUsuarioRepository
+    public class UsuarioRepository(AppDbContext dbContext) : IUsuarioRepository
     {
-        private readonly AppDbContext _dbContext;
-
-        public UsuarioRepository(AppDbContext dbContext)
-        {
-            _dbContext = dbContext;
-        }
+        private readonly AppDbContext _dbContext = dbContext;
 
         public async Task<Usuario?> ObterUsuarioPorEmailAsync(string email)
         {

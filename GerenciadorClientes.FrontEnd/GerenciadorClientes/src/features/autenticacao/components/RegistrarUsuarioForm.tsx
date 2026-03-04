@@ -1,23 +1,19 @@
 import { useState } from "react";
 import type { UsuarioDto } from "../types/Interfaces";
-import { AutenticacaoService } from "../api/AutenticacaoService";
 import { useNavigate } from "react-router-dom";
 import { Paths } from "../../../router/Path";
 import "../components/Usuario.css";
+import { usarAutenticacao } from "../hooks/UsarAutenticacao";
 
-export const RegistrarUsuarioForm = () => {
+export function RegistrarUsuarioForm() {
     const navegar = useNavigate();
+        
+    const { registrar, foiRegistrado, carregando, erro } = usarAutenticacao();
     
     const [dadosFormulario, setDadosFormulario] = useState<UsuarioDto>({
         nome: '',
         email: '',
         senha: ''
-    });
-
-    const [status, setStatus] = useState({
-        carregando: false,
-        erro: '',
-        sucesso: false
     });
 
     const handleOnChangeInput = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -27,39 +23,15 @@ export const RegistrarUsuarioForm = () => {
             ...prev,
             [name]: value
         }));
-
-        if(status.erro)
-            setStatus(prev => ({ ...prev, erro:'' }));
     };
 
     const handleSubmit = async (e: React.SubmitEvent) => {
         e.preventDefault();
-
-        if(dadosFormulario.senha!.length < 6) {
-            setStatus(prev => ({ ...prev, erro: 'A senha deve conter ao menos 6 caracteres.' }));
-            return;
-        }
-
-        setStatus({ carregando: true, erro: '', sucesso:false });
-
-        try{
-            await AutenticacaoService.registrar(dadosFormulario);
-
-            setStatus({
-                carregando: false,
-                erro: '',
-                sucesso: true
-            });
-        }
-        catch(error: any){
-            setStatus({ 
-                carregando: false,
-                erro: error.message || 'Erro ao registrar usuário.',
-                sucesso: false
-             });
-        }
-        finally{
-            alert("Usuário Criado com sucesso! Retornando para área de login.");
+        
+        await registrar(dadosFormulario);
+        if(foiRegistrado)
+        {
+            alert('Usuário Criado com sucesso! Retornando para área de login.');
             navegar(Paths.login);
         }
     };
@@ -68,9 +40,9 @@ export const RegistrarUsuarioForm = () => {
         <div className="autenticacao-container">
             <h2>Criar Novo Usuário</h2>
 
-            {status.erro && (
+            {erro && (
                 <div className="autenticacao-erro">
-                    {status.erro}
+                    {erro}
                 </div>
             )}
 
@@ -119,10 +91,10 @@ export const RegistrarUsuarioForm = () => {
                 </div>
                 <button
                     type="submit"
-                    disabled={status.carregando}
+                    disabled={carregando}
                     className="autenticacao-button-primary"
                 >
-                    {status.carregando ? 'Registrando..' : 'Registrar'}
+                    {carregando ? 'Registrando..' : 'Registrar'}
                 </button>
             </form>
         </div>

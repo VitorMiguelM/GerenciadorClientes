@@ -10,14 +10,9 @@ using System.Text;
 
 namespace GerenciadorClientes.Infra.Configuracoes
 {
-    public class TokenService : ITokenService
+    public class TokenService(IConfiguration configuration) : ITokenService
     {
-        private readonly IConfiguration _configuration;
-
-        public TokenService(IConfiguration configuration)
-        {
-            _configuration = configuration;
-        }
+        private readonly IConfiguration _configuration = configuration;
 
         public string GerarToken(Usuario usuario)
         {

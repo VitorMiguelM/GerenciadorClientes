@@ -22,6 +22,11 @@ export interface RespostaLogin {
 export interface TypeContextoAutenticacao {
     token: string | null;
     estaAutenticado: boolean;
+    foiRegistrado: boolean,
+    registrar: (dto: UsuarioDto) => Promise<void>;
     login: (dto: LoginDto) => Promise<void>;
     logout: () => void;
+
+    carregando: boolean;
+    erro: string | null;
 }

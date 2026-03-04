@@ -1,3 +1,4 @@
+import { ErroApi, type RespostaErroApi } from "../utils/ErroApi";
 import { StorageToken } from "./StorageToken";
 
 const urlBase = 'https://localhost:7084/api';
@@ -25,17 +26,23 @@ async function Http<T>(endpoint: string, config: RequestInit): Promise<T> {
 
     if(!resposta.ok)
     {   
-        const erroBody = await resposta.text();
-        throw new Error(erroBody || `Erro na requisição: ${resposta.status}`);
+        const dadosErro: RespostaErroApi = await resposta.json().catch(() => ({
+            status: resposta.status,
+            codigo: 'UNKNOWN_ERROR'
+        }));
+
+        throw new ErroApi({
+            status: resposta.status,
+            codigo: dadosErro.codigo ?? 'UNKNOWN_ERROR',
+            erros: dadosErro.erros
+        });
     }
 
     if(resposta.status === 204){
         return {} as T;
     }
-
-    const dados = await resposta.json().catch(() => null);
    
-    return dados as T;
+    return resposta.json();;
 }
 
 

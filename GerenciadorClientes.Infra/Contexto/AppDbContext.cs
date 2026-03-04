@@ -6,10 +6,8 @@ using System.Text;
 
 namespace GerenciadorClientes.Infra.Contexto
 {
-    public class AppDbContext : DbContext
+    public class AppDbContext(DbContextOptions options) : DbContext(options)
     {
-        public AppDbContext(DbContextOptions options) : base(options) { }
-
         public DbSet<Usuario> Usuarios { get; set; }
         public DbSet<Cliente> Clientes { get; set; }
 
